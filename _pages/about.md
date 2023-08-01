@@ -10,11 +10,10 @@ redirect_from:
 
 Hello! I am a graduate student at Brown University studying artificial intelligence and its applications to robotics. My research interests are vague at the moment, but I am currently exploring object-centric state representations and their applications to long-horizon task planning. Additionally, I'm broadly interested in developing models that afford robotic agents to do many tasks. 
 
-A data-driven personal website
+A Promise To Ethical AI
 ======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+Although AI and robotics can expedite tasks and ameliorate our lives, I cannot turn a blind eye in its ability to displace entire industries and amplify human bias. I personally promise to develop AI with a conscientious and egalitarian mindset. As a first-generation latino college graduate, I feel compelled to state that ethically responsible AI should always be at the forefront of discussion.
 
 Getting started
 ======
