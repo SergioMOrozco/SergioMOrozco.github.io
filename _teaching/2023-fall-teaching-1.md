@@ -10,5 +10,5 @@ location: "Providence, United States"
 
 <a href='https://cs.brown.edu/courses/cs1951r/#page-top'>Course Website</a>
 
-The aim of this course is to empower people to build robots. Students will build, program, and fly an autonomous drone. We will cover everything needed to program an autonomous robot, including safety, networking, state estimation, controls, and high-level planning. Although the course focuses on an autonomous drone, we will provide a broad overview of modern robotics, including some topics relating to autonomous ground vehicles and robotic arms.
+The aim of this course is to empower people to build robots. Students build, program, and fly an autonomous drone. We cover everything needed to program an autonomous robot, including safety, networking, state estimation, controls, and high-level planning. Although the course focuses on an autonomous drone, we provide a broad overview of modern robotics, including some topics relating to autonomous ground vehicles and robotic arms.
 
