@@ -19,3 +19,8 @@ Interests
 ======
 
 Apart from research, I spend the majority of my time reading, execising, looking through my telescope, and playing my saxophone. If your're a student at Brown, I'm always open to connecting, whether it be for a round of golf, a quick game of Magic The Gathering, or going out for a beer!
+
+Fun Fact
+======
+
+I solved the Rubick's Cube without any guides, and it took me about 3 months to solve it. Ask me and I'll show you my quirky solution.
