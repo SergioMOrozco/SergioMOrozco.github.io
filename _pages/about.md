@@ -23,4 +23,4 @@ Apart from research, I spend the majority of my time reading, execising, looking
 Fun Fact
 ======
 
-I solved the Rubick's Cube without any guides, and it took me about 3 months to solve it. Ask me and I'll show you my quirky solution.
+I solved the Rubick's Cube without any guides, and it took me about 3 months to solve it. Ask me, and I'll show you my quirky solution.
