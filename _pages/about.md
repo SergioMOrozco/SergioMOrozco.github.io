@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a graduate student at Brown University working under George Konidaris and Stefanie Tellex. I am currently exploring various state representations that allow agents to generate geometrically reasonable subgoals for long horizon tasks. I'm broadly interested in creating general autonomous agents.
+Hello! I am a graduate student at Brown University working under [George Konidaris]{https://cs.brown.edu/people/gdk/} and [Stefanie Tellex]{https://h2r.cs.brown.edu/people/}. I am currently exploring various state representations that allow agents to generate geometrically reasonable subgoals for long horizon tasks. I'm broadly interested in creating general autonomous agents.
 
 My Promise To Ethical AI
 ======
