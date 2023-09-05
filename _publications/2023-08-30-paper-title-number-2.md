@@ -6,7 +6,7 @@ excerpt: 'Real-world planning robot task planning is computationally intractable
 date: 2023-08-30
 venue: 'NeurIPS'
 review: "true"
-paperurl: 'https://openreview.net/forum?id=W8MjsxHrDpL'
+paperurl: 'https://openreview.net/forum?id=lEKf4qE9gI&noteId=7ooxwHkpas'
 ---
 
 <a href='https://openreview.net/forum?id=lEKf4qE9gI&noteId=7ooxwHkpas'>Download paper here</a>
