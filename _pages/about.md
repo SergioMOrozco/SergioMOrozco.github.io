@@ -8,12 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a full-time Flight Software Engineer at [York Space Systems](https://www.yorkspacesystems.com/). I am currently exploring various state representations that allow agents to generate geometrically reasonable subgoals for long horizon tasks. I'm broadly interested in creating general autonomous agents.
+Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a full-time Flight Software Engineer at [York Space Systems](https://www.yorkspacesystems.com/). I am currently exploring various state representations that allow agents to generate geometrically reasonable subgoals for long horizon tasks. I’m broadly interested in creating general autonomous agents.
 
 My Promise To Ethical AI
 ======
 
-Although AI and robotics can expedite tasks and ameliorate our lives, I cannot turn a blind eye in its ability to displace entire industries and amplify human bias. I personally promise to develop AI with a conscientious and egalitarian mindset, and I believed that ethically responsible AI should always be at the forefront of discussion.
+Although AI and robotics can expedite tasks and ameliorate our lives, I cannot turn a blind eye to its ability to displace entire industries and amplify human bias. I personally promise to develop AI with a conscientious and egalitarian mindset, and I believe that ethically responsible AI should always be at the forefront of discussion.
 
 Interests
 ======
