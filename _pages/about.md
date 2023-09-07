@@ -18,7 +18,7 @@ Although AI and robotics can expedite tasks and ameliorate our lives, I cannot t
 Interests
 ======
 
-Apart from research, I spend the majority of my time reading, execising, looking through my telescope, and playing my saxophone. If your're a student at Brown, I'm always open to connecting, whether it be for a round of golf, a quick game of Magic The Gathering, or going out for a beer!
+Apart from research, I spend the majority of my time reading, execising, looking through my telescope, and playing my saxophone. If you're a student at Brown, I'm always open to connecting, whether it be for a round of golf, a quick game of Magic The Gathering, or going out for a beer!
 
 Fun Fact
 ======
