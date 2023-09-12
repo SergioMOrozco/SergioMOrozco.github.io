@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Sergio Orozco"
   avatar           : "profile.png"
-  bio              : "Masters Student at Brown Univeristy"
+  bio              : "PhD Student at Brown Univeristy"
   location         : "Providence, RI"
   employer         :
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "SergioMOrozco"
+    #github           : "SergioMOrozco"
   google_plus      :
   keybase          :
   instagram        :
