@@ -8,7 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a full-time Flight Software Engineer at [York Space Systems](https://www.yorkspacesystems.com/). I am currently exploring various state representations that allow agents to generate geometrically reasonable subgoals for long horizon tasks. I’m broadly interested in creating general autonomous agents.
+Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a full-time Flight Software Engineer at [York Space Systems](https://www.yorkspacesystems.com/).
+
+I’m interested in endowing robotic systems with the ability to predict the future through the use of forward prediction models. More specifically, I believe that by giving robots the ability to understand how their actions could affect the future, they can make better decisions during learning and planning. My research interest is grounded in the belief that humans have an innate understanding of physics that informs our prediction capabilities, and we can equally embed this understanding into robots.
+
+Currently, I’m researching how we can use forward prediction models to predict deformable dynamics for object manipulation. Specifically, I am researching how Graph Neural Networks can achieve this goal reliably with stochastic aware mechanisms.
+
 
 My Promise To Ethical AI
 ======
