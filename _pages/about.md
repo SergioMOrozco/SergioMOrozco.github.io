@@ -25,6 +25,8 @@ Interests
 
 Apart from research, I spend the majority of my time reading, execising, looking through my telescope, and playing my saxophone. If you're a student at Brown, I'm always open to connecting, whether it be for a round of golf, a quick game of Magic The Gathering, or going out for a beer!
 
+I am also the Community Engagement Officer (CEO) for the Brown Graduate Student Climbing Club. Feel free to reach out to me if you would like to join!
+
 Fun Fact
 ======
 
