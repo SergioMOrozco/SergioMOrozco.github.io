@@ -6,7 +6,7 @@ excerpt: "Sign Sergio's guestbook."
 
 Thanx 4 stopping by! Leave a message below. &#9997;&#65039;
 
-<form class="guestbook-form" data-guestbook>
+<form class="guestbook-form" data-guestbook-form data-repo="{{ site.repository }}">
   <label>Name / Handle
     <input name="handle" required maxlength="80" autocomplete="nickname">
   </label>
@@ -17,10 +17,14 @@ Thanx 4 stopping by! Leave a message below. &#9997;&#65039;
     <textarea name="message" rows="4" required maxlength="1000"></textarea>
   </label>
   <button class="btn95" type="submit">&#128221; Sign it!</button>
-  <p class="small">Signing opens a GitHub issue with your message. No account? Say hi on <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a> instead.</p>
+  <p class="small">Signing opens a GitHub issue with your message. It shows up here once the webmaster approves it. No GitHub account? Say hi on <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a> instead.</p>
 </form>
 
 ## Past Visitors
+
+<div data-guestbook-entries data-repo="{{ site.repository }}" aria-live="polite">
+  <p class="small guestbook-status">Loading entries from the guestbook server&hellip;</p>
+</div>
 
 {% for entry in site.data.guestbook %}
 <div class="guestbook-entry">
@@ -29,16 +33,4 @@ Thanx 4 stopping by! Leave a message below. &#9997;&#65039;
 </div>
 {% endfor %}
 
-<script>
-  document.querySelector("[data-guestbook]").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var form = event.target;
-    var body = "**From:** " + form.handle.value + "\n" +
-      (form.homepage.value ? "**Homepage:** " + form.homepage.value + "\n" : "") +
-      "\n" + form.message.value;
-    var url = "https://github.com/{{ site.repository }}/issues/new" +
-      "?title=" + encodeURIComponent("Guestbook: " + form.handle.value) +
-      "&body=" + encodeURIComponent(body);
-    window.open(url, "_blank", "noopener");
-  });
-</script>
+<script src="{{ site.baseurl }}/assets/js/guestbook.js"></script>

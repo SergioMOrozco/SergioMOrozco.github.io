@@ -621,6 +621,15 @@ details p {
   border: 2px ridge $win-gray;
 }
 
+.guestbook-entry__message {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.guestbook-status {
+  font-style: italic;
+}
+
 .guestbook-entry__who {
   margin: 0 0 0.25rem;
   font-family: $font-fun;
