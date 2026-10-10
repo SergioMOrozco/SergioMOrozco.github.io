@@ -71,9 +71,11 @@
     })
     .then(function (issues) {
       list.textContent = "";
-      issues
-        .filter(function (issue) { return !issue.pull_request; })
-        .forEach(function (issue) { list.appendChild(render(parse(issue))); });
+      issues = issues.filter(function (issue) { return !issue.pull_request; });
+      if (!issues.length) {
+        list.appendChild(el("p", "small guestbook-status", "No entries yet. Be the first to sign!"));
+      }
+      issues.forEach(function (issue) { list.appendChild(render(parse(issue))); });
     })
     .catch(function () {
       list.textContent = "";

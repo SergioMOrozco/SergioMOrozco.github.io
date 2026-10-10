@@ -26,11 +26,4 @@ Thanx 4 stopping by! Leave a message below. &#9997;&#65039;
   <p class="small guestbook-status">Loading entries from the guestbook server&hellip;</p>
 </div>
 
-{% for entry in site.data.guestbook %}
-<div class="guestbook-entry">
-  <p class="guestbook-entry__who">{{ entry.name }} <span class="small">&mdash; {{ entry.from }}, {{ entry.date }}</span></p>
-  <p>{{ entry.message }}</p>
-</div>
-{% endfor %}
-
 <script src="{{ site.baseurl }}/assets/js/guestbook.js"></script>
