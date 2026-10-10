@@ -20,7 +20,3 @@ A list of all the pages on this site. Robots can digest the [XML version]({{ bas
 {% for post in site.publications reversed %}{% include retro-item.html %}{% endfor %}
 </ul>
 
-<h2>Blog</h2>
-<ul>
-{% for post in site.posts %}{% include retro-item.html %}{% endfor %}
-</ul>
