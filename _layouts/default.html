@@ -4,28 +4,82 @@ layout: compress
 
 {% include base_path %}
 
+{% if page.url == "/" %}
+  {% assign window_file = "INDEX" %}
+{% else %}
+  {% assign window_file = page.url | remove: ".html" | split: "/" | last | upcase | truncate: 24, "~1" %}
+{% endif %}
+
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
     {% include head.html %}
-    {% include head/custom.html %}
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&family=VT323&display=swap">
+    <script>
+      try { if (localStorage.getItem("calm") === "1") document.documentElement.classList.add("calm"); } catch (e) {}
+    </script>
   </head>
 
   <body>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <header class="banner">
+      <div class="tape" role="presentation"><span>&#9888; UNDER CONSTRUCTION &#9888;</span></div>
+      <p class="site-title"><a href="{{ base_path }}/">~*~ {{ site.title }}'s Homepage ~*~</a></p>
+      <div class="marquee" aria-hidden="true">
+        <span>&#9733; Welcome 2 my corner of the World Wide Web &#9733; Robotics Researcher &#9733; Sign my guestbook!!! &#9733;</span>
+      </div>
+    </header>
 
-    {{ content }}
+    <div class="frame">
+      <nav class="sidenav" aria-label="Main">
+        <p class="sidenav__label">~ NaViGaTe ~</p>
+        <ul>
+          <li><a href="{{ base_path }}/"{% if page.url == "/" %} aria-current="page"{% endif %}>&#9658; Home</a></li>
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains "://" %}
+              {% assign nav_href = link.url %}
+            {% else %}
+              {% assign nav_href = link.url | prepend: base_path %}
+            {% endif %}
+            <li><a href="{{ nav_href }}"{% if page.url == link.url %} aria-current="page"{% endif %}>&#9658; {{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+        <div class="sidebox">
+          <p class="sidebox__title">Cool Sites</p>
+          <ul>
+            <li><a href="https://cs.brown.edu/">Brown CS</a></li>
+            <li><a href="https://h2r.cs.brown.edu/">H2R Lab</a></li>
+            <li><a href="https://cs.brown.edu/people/gdk/">IRL Lab</a></li>
+            {% if site.author.linkedin %}<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>{% endif %}
+          </ul>
+        </div>
+
+        <div class="sidebox sidebox--midi" aria-hidden="true">
+          <p class="sidebox__title">Now Playing</p>
+          <p>&#9835; dialup.mid &#9835;</p>
+        </div>
+      </nav>
+
+      <main id="content" class="window">
+        <div class="window__titlebar">
+          <span class="window__name">C:\WEB\SERGIO\{{ window_file }}.HTM</span>
+          <span class="window__controls" aria-hidden="true"><b>_</b><b>&#9633;</b><b>&times;</b></span>
+        </div>
+        <div class="window__body">
+          {{ content }}
+        </div>
+      </main>
     </div>
 
-    {% include scripts.html %}
+    {% include retro-footer.html %}
 
+    <button type="button" class="calm-toggle" aria-pressed="false">[ disable 90s mode ]</button>
+
+    <script src="{{ base_path }}/assets/js/retro.js"></script>
   </body>
 </html>

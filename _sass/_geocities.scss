@@ -1,0 +1,902 @@
+/* ==========================================================================
+   GeoCities theme
+   Loud in the margins, calm behind the text.
+   ========================================================================== */
+
+$win-gray: #c0c0c0;
+$win-light: #ffffff;
+$win-dark: #808080;
+$win-darker: #404040;
+$navy: #000080;
+$link: #0000ee;
+$visited: #551a8b;
+$hot: #c00000;
+$neon: #39ff14;
+$gold: #ffd700;
+
+$font-body: "Times New Roman", Times, Georgia, serif;
+$font-fun: "Comic Sans MS", "Comic Neue", "Chalkboard SE", cursive;
+$font-pixel: "Press Start 2P", "Courier New", monospace;
+$font-lcd: "VT323", "Courier New", monospace;
+
+@mixin bevel-out {
+  box-shadow: inset -2px -2px 0 $win-darker, inset 2px 2px 0 $win-light, inset -4px -4px 0 $win-dark;
+}
+
+@mixin bevel-in {
+  box-shadow: inset 2px 2px 0 $win-darker, inset -2px -2px 0 $win-light, inset 4px 4px 0 $win-dark;
+}
+
+/* Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  background-color: #000018;
+  /* Self-made starfield tile */
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 140px, #fff, transparent),
+    radial-gradient(2px 2px at 160px 60px, #ffe, transparent),
+    radial-gradient(1px 1px at 50px 180px, #9cf, transparent),
+    radial-gradient(1px 1px at 130px 110px, #fff, transparent),
+    radial-gradient(2px 2px at 190px 190px, #fcf, transparent);
+  background-size: 200px 200px;
+  animation: drift 120s linear infinite;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px 4rem;
+  color: #000;
+  font-family: $font-body;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $link;
+}
+
+a:visited {
+  color: $visited;
+}
+
+a:hover,
+a:focus {
+  color: $hot;
+}
+
+:focus-visible {
+  outline: 3px dashed $hot;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: $gold;
+  color: #000;
+
+  &:focus {
+    left: 16px;
+  }
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+hr,
+.rainbow {
+  height: 4px;
+  border: 0;
+  margin: 2rem 0;
+  background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta);
+}
+
+/* Banner
+   ========================================================================== */
+
+.banner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.tape {
+  padding: 6px 0;
+  background: repeating-linear-gradient(-45deg, $gold 0 18px, #111 18px 36px);
+
+  span {
+    display: inline-block;
+    padding: 2px 12px;
+    background: #111;
+    color: $gold;
+    font-family: $font-pixel;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.site-title {
+  margin: 1.25rem 0 0.75rem;
+  font-family: $font-pixel;
+  font-size: clamp(1rem, 4vw, 2rem);
+  line-height: 1.4;
+
+  a,
+  a:visited {
+    color: $gold;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 $hot, 6px 6px 0 $navy;
+  }
+
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 2px ridge $win-gray;
+  border-bottom: 2px ridge $win-gray;
+  color: $neon;
+  font-family: $font-lcd;
+  font-size: 1.4rem;
+  background: #000;
+
+  span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+    animation-delay: -9s;
+  }
+}
+
+/* Frame: nav + window
+   ========================================================================== */
+
+.frame {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+}
+
+.sidenav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  > ul a,
+  > ul a:visited {
+    display: block;
+    margin-bottom: 6px;
+    padding: 8px 12px;
+    background: $win-gray;
+    color: #000;
+    font-family: $font-fun;
+    font-weight: 700;
+    text-decoration: none;
+    @include bevel-out;
+  }
+
+  > ul a:hover,
+  > ul a:focus {
+    background: $gold;
+  }
+
+  > ul a[aria-current="page"],
+  > ul a:active {
+    background: #a8a8a8;
+    @include bevel-in;
+  }
+}
+
+.sidenav__label {
+  margin: 0 0 0.5rem;
+  color: $neon;
+  font-family: $font-pixel;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.sidebox {
+  margin-top: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 3px double $gold;
+  background: #000;
+  color: #fff;
+  font-size: 0.95rem;
+
+  li {
+    margin: 0.2rem 0;
+  }
+
+  li::before {
+    content: "\2605  ";
+    color: $gold;
+  }
+
+  a,
+  a:visited {
+    color: #9cf;
+  }
+
+  a:hover,
+  a:focus {
+    color: $gold;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.sidebox__title {
+  margin-bottom: 0.25rem !important;
+  color: $gold;
+  font-family: $font-fun;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.sidebox--midi p:last-child {
+  color: $neon;
+  font-family: $font-lcd;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Window (Win95-ish) holding the readable content */
+
+.window {
+  padding: 4px;
+  background: $win-gray;
+  @include bevel-out;
+}
+
+.window__titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3px 4px 3px 8px;
+  background: linear-gradient(90deg, $navy, #1084d0);
+  color: #fff;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.window__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.window__controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+
+  b {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 16px;
+    background: $win-gray;
+    color: #000;
+    font-size: 0.75rem;
+    line-height: 1;
+    @include bevel-out;
+  }
+}
+
+.window__body {
+  margin-top: 4px;
+  padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2rem;
+  background: #fff;
+  @include bevel-in;
+
+  > * {
+    max-width: 72ch;
+  }
+}
+
+/* Content typography
+   ========================================================================== */
+
+.page-title,
+.window__body h1 {
+  margin: 0 0 0.75rem;
+  color: $navy;
+  font-family: $font-fun;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  line-height: 1.2;
+}
+
+.window__body h2 {
+  margin: 2rem 0 0.5rem;
+  color: $hot;
+  font-family: $font-fun;
+  font-size: 1.45rem;
+
+  &::before {
+    content: "\00bb  ";
+    color: $navy;
+  }
+}
+
+.window__body h3 {
+  font-family: $font-fun;
+  color: $navy;
+}
+
+.page-meta {
+  margin-top: 0;
+  color: #333;
+  font-style: italic;
+}
+
+.venue {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 6px;
+  border: 1px solid #000;
+  background: $gold;
+  color: #000;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+code,
+pre {
+  font-family: "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #000;
+  color: $neon;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 4px solid $gold;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 4px 8px;
+  border: 2px inset $win-gray;
+}
+
+/* Bits and pieces */
+
+.btn95,
+.btn95:visited {
+  display: inline-block;
+  padding: 6px 14px;
+  background: $win-gray;
+  color: #000;
+  font-family: $font-fun;
+  font-weight: 700;
+  text-decoration: none;
+  @include bevel-out;
+
+  &:hover,
+  &:focus {
+    background: $gold;
+    color: #000;
+  }
+
+  &:active {
+    @include bevel-in;
+  }
+}
+
+.photo-frame {
+  float: right;
+  width: 180px;
+  margin: 0 0 1rem 1.5rem;
+  padding: 8px 8px 4px;
+  background: $win-gray;
+  text-align: center;
+  @include bevel-out;
+
+  img {
+    display: block;
+    border: 2px inset $win-gray;
+  }
+
+  figcaption {
+    font-family: $font-fun;
+    font-size: 0.85rem;
+  }
+}
+
+.whats-new {
+  clear: both;
+  margin: 2rem 0;
+  padding: 0.75rem 1rem;
+  border: 3px dashed $hot;
+  background: #ffffe0;
+
+  h2 {
+    margin-top: 0 !important;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+}
+
+.icon-list {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin: 0.3rem 0;
+  }
+}
+
+.new-badge {
+  display: inline-block;
+  margin-left: 0.25rem;
+  padding: 0 4px;
+  background: $hot;
+  color: #fff;
+  font-family: $font-pixel;
+  font-size: 0.6rem;
+  vertical-align: middle;
+  animation: blink 1s steps(1) infinite;
+}
+
+.pub-list {
+  padding-left: 1.5rem;
+
+  > li {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.pub__title {
+  font-weight: 700;
+}
+
+details summary {
+  cursor: pointer;
+  color: $navy;
+  font-family: $font-fun;
+  font-size: 0.95rem;
+}
+
+details p {
+  font-size: 1rem;
+}
+
+.citation {
+  font-size: 0.95rem;
+}
+
+.under-construction {
+  padding: 0.75rem 1rem;
+  border: 2px dashed #000;
+  background: repeating-linear-gradient(-45deg, #fff5b0 0 14px, #fff 14px 28px);
+  font-family: $font-fun;
+}
+
+.pub__authors {
+  font-size: 1rem;
+}
+
+.award {
+  display: inline-block;
+  margin-left: 0.25rem;
+  padding: 0 6px;
+  border: 2px ridge $gold;
+  background: $navy;
+  color: $gold;
+  font-family: $font-fun;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.media {
+  display: block;
+  margin: 1rem 0;
+  border: 2px inset $win-gray;
+}
+
+/* Projects */
+
+.project-list {
+  padding: 0;
+  list-style: none;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  background: #f0f0ff;
+  border: 2px ridge $win-gray;
+
+  img {
+    margin: 0;
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+}
+
+.project-card__title {
+  font-family: $font-fun;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.tag {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 0 5px;
+  border: 1px solid $win-dark;
+  background: #fff;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+/* Experience */
+
+.job {
+  margin-bottom: 1.5rem;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0.4rem 0;
+  }
+}
+
+.job__head {
+  font-family: $font-fun;
+  font-size: 1.15rem;
+}
+
+.job__meta {
+  color: #333;
+  font-style: italic;
+}
+
+/* Guestbook */
+
+.guestbook-entry {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #f0f0ff;
+  border: 2px ridge $win-gray;
+}
+
+.guestbook-entry__who {
+  margin: 0 0 0.25rem;
+  font-family: $font-fun;
+  font-weight: 700;
+}
+
+.guestbook-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 32rem;
+  padding: 1rem;
+  background: $win-gray;
+  @include bevel-out;
+
+  label {
+    display: grid;
+    gap: 0.2rem;
+    font-family: $font-fun;
+    font-weight: 700;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 4px 6px;
+    border: 0;
+    background: #fff;
+    font: inherit;
+    font-family: $font-body;
+    font-weight: 400;
+    @include bevel-in;
+  }
+
+  button {
+    justify-self: start;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+/* Footer
+   ========================================================================== */
+
+.retro-footer {
+  max-width: 1100px;
+  margin: 1rem auto 0;
+  color: #fff;
+  text-align: center;
+
+  a,
+  a:visited {
+    color: #9cf;
+  }
+
+  a:hover,
+  a:focus {
+    color: $gold;
+  }
+}
+
+.counter {
+  font-family: $font-fun;
+}
+
+.odometer {
+  display: inline-block;
+  padding: 2px 6px;
+  border: 2px inset $win-gray;
+  background: #000;
+  color: $neon;
+  font-family: $font-lcd;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  vertical-align: middle;
+}
+
+.counter__note {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.webring {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  max-width: 34rem;
+  border: 3px ridge $gold;
+  font-family: $font-fun;
+  font-weight: 700;
+
+  span {
+    color: $gold;
+  }
+}
+
+.buttons88 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.b88,
+.retro-footer .b88,
+.retro-footer .b88:visited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 88px;
+  height: 31px;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1.1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+
+  b {
+    font-size: 11px;
+  }
+}
+
+.b88--jekyll { background: linear-gradient(#c2185b, #6b0f30); }
+.b88--brown { background: linear-gradient(#7b3f00, #3e1f00); }
+.b88--linkedin { background: #0a66c2; }
+.b88--netscape { background: linear-gradient(#008080, #003f3f); }
+.retro-footer .b88--any { background: #fff; color: #000; }
+
+.linkish {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #9cf;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.calm-toggle {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 50;
+  padding: 6px 10px;
+  border: 0;
+  background: $win-gray;
+  color: #000;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  @include bevel-out;
+
+  &:active {
+    @include bevel-in;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  z-index: 60;
+  pointer-events: none;
+  color: $gold;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  animation: sparkle 0.8s ease-out forwards;
+}
+
+/* Animations
+   ========================================================================== */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: -400px 200px; }
+}
+
+@keyframes sparkle {
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.4);
+  }
+}
+
+/* Calm mode and reduced motion
+   ========================================================================== */
+
+@mixin calm-rules {
+  .marquee {
+    white-space: normal;
+  }
+
+  .marquee span {
+    padding-left: 0;
+    animation: none;
+  }
+
+  .new-badge,
+  .tape {
+    animation: none;
+  }
+
+  .sparkle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    animation: none;
+  }
+
+  @include calm-rules;
+}
+
+html.calm {
+  animation: none;
+  background: #1b1b2f;
+
+  @include calm-rules;
+}
+
+/* Small screens
+   ========================================================================== */
+
+@media (max-width: 700px) {
+  .frame {
+    grid-template-columns: 1fr;
+  }
+
+  .sidenav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    a {
+      margin-bottom: 0;
+      padding: 6px 10px;
+      font-size: 0.95rem;
+    }
+  }
+
+  .sidebox {
+    display: none;
+  }
+
+  .marquee {
+    font-size: 1.15rem;
+  }
+
+  .photo-frame {
+    float: none;
+    margin: 0 auto 1rem;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .calm-toggle {
+    font-size: 0.7rem;
+  }
+}

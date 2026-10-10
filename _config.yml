@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Sergio Orozco"
 title_separator          : "-"
 name                     : &name "Sergio Orozco"
-description              : &description "personal description"
+description              : &description "Sergio Orozco's homepage on the information superhighway. PhD student in robotics at Brown University."
 url                      : https://sergiomorozco.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sergiomorozco/sergiomorozco.github.io"
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -146,6 +146,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - markdown_generator
 keep_files:
   - .git
   - .svn
@@ -181,10 +182,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
+  projects:
     output: true
     permalink: /:collection/:path/
 
@@ -227,23 +225,12 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _projects
   - scope:
       path: ""
-      type: portfolio
+      type: projects
     values:
       layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:

@@ -2,36 +2,25 @@
 layout: archive
 title: "Sitemap"
 permalink: /sitemap/
-author_profile: true
 ---
 
 {% include base_path %}
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+A list of all the pages on this site. Robots can digest the [XML version]({{ base_path }}/sitemap.xml) instead.
 
 <h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul>
+{% for p in site.pages %}{% if p.title and p.sitemap != false %}
+  <li><a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a></li>
+{% endif %}{% endfor %}
+</ul>
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2>Publications</h2>
+<ul>
+{% for post in site.publications reversed %}{% include retro-item.html %}{% endfor %}
+</ul>
 
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+<h2>Blog</h2>
+<ul>
+{% for post in site.posts %}{% include retro-item.html %}{% endfor %}
+</ul>

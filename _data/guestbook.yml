@@ -1,0 +1,20 @@
+# Guestbook entries shown on /guestbook/. Add real ones from GitHub issues by hand.
+- name: "~*~RoboFan98~*~"
+  from: "Somewhere on the Information Superhighway"
+  date: "08/14/1998"
+  message: "cool site!!! luv the robots. plz visit MY page"
+
+- name: "A Lost Mars Rover"
+  from: "Gale Crater"
+  date: "11/02/2003"
+  message: "Beep. Could not find my subgoals. Found this page instead. 10/10."
+
+- name: "TurtleBot"
+  from: "Brown CS, 4th floor"
+  date: "03/30/2019"
+  message: "Got stuck under a desk for 6 hours. Still better than the 404 page."
+
+- name: "webmaster@geocities"
+  from: "SiliconValley/Lakes/4217"
+  date: "10/26/2009"
+  message: "We're shutting down tomorrow. Nice knowing you."

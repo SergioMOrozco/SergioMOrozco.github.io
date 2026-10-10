@@ -1,0 +1,11 @@
+{% include base_path %}
+<li>
+  <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+  {% if post.collection == "teaching" %}
+    <br><span class="small">{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</span>
+  {% elsif post.collection == "publications" %}
+    <span class="small">&mdash; {{ post.venue }}</span>
+  {% elsif post.date %}
+    <span class="small">&mdash; {{ post.date | date: "%B %d, %Y" }}</span>
+  {% endif %}
+</li>

@@ -1,0 +1,61 @@
+# Work experience and education, shown on /experience/. Newest first.
+jobs:
+  - role: "Foundation Model Researcher"
+    org: "Midcentury"
+    location: "New York City, New York"
+    dates: "June 2026 – Present"
+    bullets:
+      - "Post-trained π0.5 on proprietary egocentric and robot data to learn more robust policies."
+      - "Led a research project on a team of 3 that resulted in a publication at a CoRL workshop."
+    tech: "Python, PyTorch, Modal"
+
+  - role: "Research Intern"
+    org: "Robotics and AI Institute (RAI)"
+    location: "Cambridge, Massachusetts"
+    dates: "February 2025 – August 2025"
+    bullets:
+      - "Led a research project on a team of 5 that won the Best Paper Award at the CoRL RINO Workshop."
+      - "Conducted experiments in simulation (IsaacSim, Genesis) and on real hardware (Franka Research 3 arm)."
+      - "Trained a world model to accurately learn the dynamics of 5 common household deformable objects from few interactions using equivariance and physics priors."
+    tech: "Python, PyTorch, PyTorch Geometric"
+
+  - role: "Research Assistant"
+    org: "Brown University"
+    location: "Providence, Rhode Island"
+    dates: "September 2022 – October 2023"
+    bullets:
+      - "Assisted with and conducted published research in the Humans to Robots Laboratory and the Intelligent Robot Laboratory."
+      - "Developed a testbed on a Boston Dynamics Spot robot that supported research on two projects."
+      - "Equipped Spot to recognize about 10 household items along with their locations and grasps, letting researchers test a range of novel task planners."
+    tech: "Python, Boston Dynamics SDK, PyTorch"
+
+  - role: "Flight Software Engineer"
+    org: "York Space Systems"
+    location: "Denver, Colorado"
+    dates: "June 2021 – September 2023"
+    bullets:
+      - "Designed and developed simulation software emulating over 40 payload and critical bus components for York's S-Class satellites."
+      - "Simulated over 500 commands and over 1,000 telemetry items processed by the onboard flight computer."
+      - "Gave customers the capabilities of York's $5 million S-Class satellite for testing without needing any actual hardware."
+      - "Designed and developed Store and Forward capabilities on the S-Class satellite to ingest over 100 JREAP messages per second using Google Protocol Buffers."
+      - "Took part in technical software interviews to evaluate applicants."
+    tech: "C# .NET, Google Protocol Buffers, C, CMake, Make, Docker, Coverity"
+
+  - role: "Software Engineer"
+    org: "Sierra Nevada Corporation"
+    location: "Denver, Colorado"
+    dates: "June 2019 – May 2021"
+    bullets:
+      - "Developed and maintained a $23 million simulation program that emulated realistic signals intelligence for the United States Air Force."
+      - "Worked with customers to create realistic radio signals."
+      - "Developed mission application systems for over 200 MH-60 helicopters, displaying IR video feeds and Cursor on Target data on a world map."
+      - "Led and mentored college interns developing proprietary tools for the company."
+    tech: "C# .NET, Reactive, Python, WPF, Windows Forms"
+
+education:
+  - school: "Brown University"
+    degree: "Ph.D. in Computer Science"
+    dates: "October 2023 – Present"
+  - school: "University of Colorado Colorado Springs"
+    degree: "B.S. in Computer Science"
+    dates: "August 2016 – May 2019"

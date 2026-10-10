@@ -1,0 +1,21 @@
+{% include base_path %}
+{% assign now_s = site.time | date: "%s" | plus: 0 %}
+{% assign posted_s = post.date | date: "%s" | plus: 0 %}
+{% assign age_s = now_s | minus: posted_s %}
+<li class="pub">
+  <a class="pub__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+  {% if age_s < 31536000 %}<span class="new-badge">NEW!</span>{% endif %}
+  {% if post.authors %}<br><span class="pub__authors">{{ post.authors | replace: "Sergio Orozco", "<b>Sergio Orozco</b>" }}</span>{% endif %}
+  <br>
+  <span class="venue">{{ post.venue }}</span>
+  {% if post.also_venue %}<span class="venue">{{ post.also_venue }}</span>{% endif %}
+  {% if post.award %}<span class="award">&#127942; {{ post.award }}</span>{% endif %}
+  {% if post.paperurl %}&middot; <a href="{{ post.paperurl }}">[PDF]</a>{% endif %}
+  {% if post.status %}<br><span class="small"><i>{{ post.status }}</i></span>{% endif %}
+  {% if post.abstract %}
+    <details>
+      <summary>click 2 expand abstract</summary>
+      <p>{{ post.abstract }}</p>
+    </details>
+  {% endif %}
+</li>

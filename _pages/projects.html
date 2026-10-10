@@ -1,0 +1,26 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+---
+
+{% include base_path %}
+
+<p>Stuff I built! Click 4 more info.</p>
+
+<ul class="project-list">
+{% assign projects = site.projects | sort: "date" | reverse %}
+{% for project in projects %}
+  <li class="project-card">
+    <a class="project-card__thumb" href="{{ base_path }}{{ project.url }}">
+      <img src="{{ base_path }}{{ project.thumbnail }}" alt="" width="900" height="450" loading="lazy">
+    </a>
+    <div>
+      <a class="project-card__title" href="{{ base_path }}{{ project.url }}">{{ project.title }}</a>
+      <p>{{ project.summary }}</p>
+      {% if project.tags %}<p class="small">{% for tag in project.tags %}<span class="tag">{{ tag }}</span> {% endfor %}</p>{% endif %}
+      {% if project.repo %}<p class="small"><a href="{{ project.repo }}">[source code]</a></p>{% endif %}
+    </div>
+  </li>
+{% endfor %}
+</ul>

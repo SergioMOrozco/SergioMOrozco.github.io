@@ -1,0 +1,29 @@
+{% include base_path %}
+<footer class="retro-footer">
+  <hr class="rainbow">
+
+  <p class="counter">
+    You are visitor #<span class="odometer" data-counter>0001337</span>
+    <span class="counter__note">(since 1998)</span>
+  </p>
+
+  <nav class="webring" aria-label="Webring">
+    <a href="https://cs.brown.edu/people/gdk/">&#9664; prev</a>
+    <span>&#9733; The Robot Learning Webring &#9733;</span>
+    <a href="https://h2r.cs.brown.edu/">next &#9654;</a>
+  </nav>
+
+  <ul class="buttons88">
+    <li><a class="b88 b88--jekyll" href="https://jekyllrb.com/"><b>JEKYLL</b> powered</a></li>
+    <li><a class="b88 b88--brown" href="https://cs.brown.edu/"><b>BROWN</b> CS</a></li>
+    {% if site.author.linkedin %}<li><a class="b88 b88--linkedin" href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><b>Linked</b>in</a></li>{% endif %}
+    <li><span class="b88 b88--netscape"><b>NETSCAPE</b> NOW!</span></li>
+    <li><span class="b88 b88--any"><b>ANY</b> browser</span></li>
+  </ul>
+
+  <p class="small">
+    Best viewed with Netscape Navigator 4.0 at 800&times;600.<br>
+    Last updated {{ site.time | date: "%m/%d/%Y" }} &middot; &copy; {{ site.time | date: "%Y" }} {{ site.name }}
+    &middot; <button type="button" class="linkish" data-sparkles>&#10024; sparkles: off</button>
+  </p>
+</footer>
