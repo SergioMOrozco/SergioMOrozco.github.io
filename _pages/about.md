@@ -16,6 +16,12 @@ Hello! I am a graduate student at Brown University working under [George Konidar
 
 <div class="whats-new" markdown="1">
 
+<figure class="spin-me">
+  <img class="spin-me__anim" src="{{ site.baseurl }}/images/me-3d.gif" alt="Animated, gradient-colored 3D render of Sergio spinning" width="112" height="112">
+  <img class="spin-me__still" src="{{ site.baseurl }}/images/me-3d-still.png" alt="Gradient-colored 3D render of Sergio" width="112" height="112">
+  <figcaption>me in 3D!</figcaption>
+</figure>
+
 ## What's New?!
 
 * **{{ site.time | date: "%m/%Y" }}:** This site got a makeover. Party like it's 1999. <span class="new-badge">NEW!</span>

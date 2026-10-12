@@ -451,6 +451,26 @@ th {
   }
 }
 
+.spin-me {
+  float: right;
+  margin: 0 0 0.5rem 1rem;
+  text-align: center;
+
+  img {
+    display: block;
+    image-rendering: auto;
+  }
+
+  figcaption {
+    font-family: $font-pixel;
+    font-size: 0.55rem;
+  }
+}
+
+.spin-me__still {
+  display: none !important;
+}
+
 .whats-new {
   clear: both;
   margin: 2rem 0;
@@ -810,6 +830,14 @@ details p {
    ========================================================================== */
 
 @mixin calm-rules {
+  .spin-me__anim {
+    display: none !important;
+  }
+
+  .spin-me__still {
+    display: block !important;
+  }
+
   .marquee {
     white-space: normal;
   }
