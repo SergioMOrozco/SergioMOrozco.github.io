@@ -16,10 +16,10 @@ Hello! I am a graduate student at Brown University working under [George Konidar
 
 <div class="whats-new" markdown="1">
 
-<figure class="spin-me">
+<figure class="spin-me" data-spin-me data-sprite="{{ site.baseurl }}/images/me-3d-sprite.webp" data-frames="100" data-cols="10">
   <img class="spin-me__anim" src="{{ site.baseurl }}/images/me-3d.gif" alt="Animated, gradient-colored 3D render of Sergio spinning" width="112" height="112">
   <img class="spin-me__still" src="{{ site.baseurl }}/images/me-3d-still.png" alt="Gradient-colored 3D render of Sergio" width="112" height="112">
-  <figcaption>me in 3D!</figcaption>
+  <figcaption>me in 3D!<span class="spin-me__hint"> drag 2 spin</span></figcaption>
 </figure>
 
 ## What's New?!
@@ -33,3 +33,5 @@ Hello! I am a graduate student at Brown University working under [George Konidar
 </div>
 
 <p class="under-construction">&#128679; More stuff coming soon!! This page is <b>always</b> under construction. &#128679;</p>
+
+<script src="{{ site.baseurl }}/assets/js/spin-me.js"></script>

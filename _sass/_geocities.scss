@@ -471,6 +471,39 @@ th {
   display: none !important;
 }
 
+.spin-me__view {
+  width: 112px;
+  height: 112px;
+  background-repeat: no-repeat;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+
+  &.is-dragging {
+    cursor: grabbing;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed $link;
+    outline-offset: 2px;
+  }
+}
+
+.spin-me__hint {
+  display: none;
+}
+
+.spin-me.is-live {
+  .spin-me__anim,
+  .spin-me__still {
+    display: none !important;
+  }
+
+  .spin-me__hint {
+    display: block;
+  }
+}
+
 .whats-new {
   clear: both;
   margin: 2rem 0;
