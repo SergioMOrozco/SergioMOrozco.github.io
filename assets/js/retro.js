@@ -11,12 +11,29 @@
     }
   }
 
-  /* Fake hit counter: grows a little every day, plus a bit of noise. */
+  /* Hit counter: real total from GoatCounter, or a fake one if that fails. */
   var counter = document.querySelector("[data-counter]");
   if (counter) {
     var days = Math.floor((Date.now() - Date.UTC(1998, 7, 1)) / 86400000);
     var hits = 1337 + days * 3 + Math.floor(Math.random() * 3);
     counter.textContent = String(hits).padStart(7, "0");
+
+    if (window.fetch) {
+      fetch("https://sergio.goatcounter.com/counter/TOTAL.json")
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          var total = parseInt(String(data.count).replace(/\D/g, ""), 10);
+          if (!isNaN(total)) {
+            counter.textContent = String(total).padStart(7, "0");
+            var note = document.querySelector(".counter__note");
+            if (note) note.textContent = "(4 real!)";
+          }
+        })
+        .catch(function () {});
+    }
   }
 
   /* 90s mode toggle. */
