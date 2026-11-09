@@ -24,7 +24,6 @@ Hello! I am a graduate student at Brown University working under [George Konidar
 
 ## What's New?!
 
-* **{{ site.time | date: "%m/%Y" }}:** This site got a makeover. Party like it's 1999. <span class="new-badge">NEW!</span>
 * **11/2026:** &#127942; [TAP-MPC](https://openreview.net/forum?id=SJm6qXxKVF) ranked in the **Top 30% of Submissions** at the Do Robots Need World Models? Workshop @ CoRL 2026!
 * **06/2026:** Joined **Midcentury** as a Foundation Model Researcher.
 * **2026:** Workshop papers at **ICLR 2026**, **RSS 2026** and **CoRL 2026**. Check out my [publications]({{ site.baseurl }}/publications/)!
