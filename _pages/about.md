@@ -12,7 +12,7 @@ redirect_from:
   <figcaption>~ me ~</figcaption>
 </figure>
 
-Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a full-time Flight Software Engineer at [York Space Systems](https://www.yorkspacesystems.com/). I'm interested in learning world models and the structure around them to support counterfactual reasoning on long-horizon tasks. My research focuses on establishing which priors (learned or explicit) are useful for downstream robotic manipulation. I'm currently also a Foundation Model Researcher at Midcentury.
+Hello! I am a graduate student at Brown University working under [George Konidaris](https://cs.brown.edu/people/gdk/) and [Stefanie Tellex](https://h2r.cs.brown.edu/people/). Previously, I was a research intern at the [Robotics and AI Institute](https://rai-inst.com/). I'm interested in learning world models and the structure around them to support counterfactual reasoning on long-horizon tasks. My research focuses on establishing which priors (learned or explicit) are useful for downstream robotic manipulation. I'm currently also a Foundation Model Researcher at [Midcentury](https://www.midcentury.xyz/).
 
 <div class="whats-new" markdown="1">
 
